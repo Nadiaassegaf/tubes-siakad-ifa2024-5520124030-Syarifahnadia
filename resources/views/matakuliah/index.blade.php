@@ -31,6 +31,9 @@
 
         .sidebar-menu{
             margin-top:20px;
+            height:calc(100vh - 170px);
+            display:flex;
+            flex-direction:column;
         }
 
         .sidebar-menu a{
@@ -42,8 +45,31 @@
         }
 
         .sidebar-menu a:hover{
-            background:#8405fc;
+            background:rgba(255,255,255,.15);
             color:white;
+            padding-left:35px;
+        }
+
+        .logout-form{
+            margin-top:auto;
+        }
+
+        .logout-btn{
+            width:100%;
+            border:none;
+            background:none;
+            color:white;
+            padding:15px 25px;
+            text-align:left;
+            cursor:pointer;
+            transition:.3s;
+            font-size:16px;
+        }
+
+        .logout-btn:hover{
+            background:rgba(255,255,255,.15);
+            color:white;
+            padding-left:35px;
         }
 
         .main-content{
@@ -114,15 +140,37 @@
 
     <div class="sidebar-menu">
 
+       <div class="sidebar-menu">
+
         @if(auth()->user()->role == 'admin')
-            <a href="/admin">Dashboard</a>
+            <a href="/admin"> Dashboard</a>
             <a href="/dosen">Dosen</a>
-            <a href="/mahasiswa">Mahasiswa</a>
+            <a href="/mahasiswa"> Mahasiswa</a>
         @endif
 
-        <a href="{{ auth()->user()->role == 'admin' ? '/matakuliah' : '/lihat-matakuliah' }}">Mata Kuliah</a>
-        <a href="{{ auth()->user()->role == 'admin' ? '/jadwal' : '/lihat-jadwal' }}">Jadwal Kuliah</a>
-        <a href="{{ auth()->user()->role == 'admin' ? '/krs' : '/lihat-krs' }}">KRS</a>
+        <a href="{{ auth()->user()->role == 'admin' ? '/matakuliah' : '/lihat-matakuliah' }}">
+             Mata Kuliah
+        </a>
+
+        <a href="{{ auth()->user()->role == 'admin' ? '/jadwal' : '/lihat-jadwal' }}">
+             Jadwal Kuliah
+        </a>
+
+        <a href="{{ auth()->user()->role == 'admin' ? '/krs' : '/lihat-krs' }}">
+             KRS
+        </a>
+
+        <form method="POST"
+            action="{{ route('logout') }}"
+            class="logout-form">
+            @csrf
+
+            <button type="submit" class="logout-btn">
+                ⏻ Logout
+            </button>
+        </form>
+
+</div>
 
     </div>
 

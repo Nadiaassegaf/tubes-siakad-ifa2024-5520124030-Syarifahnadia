@@ -10,141 +10,153 @@
 
     <style>
         *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+            }
 
-        body{
-            background:#f4f6fb;
-            font-family:'Segoe UI',sans-serif;
-        }
+            body{
+                background:#f4f6fb;
+                font-family:'Segoe UI',sans-serif;
+            }
 
-        .sidebar{
-            width:250px;
-            height:100vh;
-            background:linear-gradient(180deg,#8405fc,#240344);
-            position:fixed;
-            left:0;
-            top:0;
-            color:white;
-        }
+            .sidebar{
+                width:250px;
+                height:100vh;
+                background:linear-gradient(180deg,#8405fc,#240344);
+                position:fixed;
+                left:0;
+                top:0;
+                color:white;
+                box-shadow:5px 0 20px rgba(0,0,0,.15);
+            }
 
-        .logo{
-            padding:25px;
-            text-align:center;
-            border-bottom:1px solid rgba(255,255,255,.2);
-        }
+            .logo{
+                padding:30px 20px;
+                text-align:center;
+                border-bottom:1px solid rgba(255,255,255,.15);
+            }
 
-        .logo h3{
-            margin:0;
-            font-weight:bold;
-        }
+            .logo h3{
+                margin:0;
+                font-size:42px;
+                font-weight:700;
+            }
 
-        .sidebar-menu{
-            margin-top:20px;
-        }
+            .logo small{
+                font-size:14px;
+            }
 
-        .sidebar-menu a{
+            .sidebar-menu a{
             display:block;
             padding:15px 25px;
             text-decoration:none;
             color:white;
             transition:.3s;
-        }
+            font-size:16px;
+            }
 
-        .sidebar-menu a:hover{
-            background:#8405fc;
+            .sidebar-menu a:hover{
+            background:rgba(255,255,255,.15);
+            padding-left:35px;
             color:white;
-        }
+            }
 
-        .main-content{
-            margin-left:250px;
-            padding:30px;
-        }
+            .logout-form{
+            margin-top:auto;
+            }
 
-        .header{
-            background:white;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0 3px 15px rgba(0,0,0,.08);
-            margin-bottom:25px;
-        }
-
-        .header h2{
-            color:#240344;
-            font-weight:bold;
-        }
-
-        .header h4{
-            color:#240344;
-            font-weight:bold;
-        }
-
-        .info-box{
-            background:white;
-            border-left:5px solid #0b3d91;
-            padding:20px;
-            border-radius:10px;
-            margin-bottom:25px;
-            box-shadow:0 3px 10px rgba(0,0,0,.08);
-        }
-
-        .stat-card{
-            border-radius:15px;
-            color:white;
-            padding:20px;
-            box-shadow:0 4px 15px rgba(0,0,0,.1);
-        }
-
-        .card-dosen{
-            background:linear-gradient(135deg,#8405fc,#240344);
-        }
-
-        .card-mahasiswa{
-            background:linear-gradient(135deg,#8405fc,#240344);
-        }
-
-        .card-mk{
-            background:linear-gradient(135deg,#8405fc,#240344);
-        }
-
-        .card-jadwal{
-            background:linear-gradient(135deg,#8405fc,#240344);
-        }
-
-        .card-krs{
-            background:linear-gradient(135deg,#8405fc,#240344);
-        }
-
-        .stat-card h1{
-            font-size:42px;
-            font-weight:bold;
-        }
-
-        .menu-title{
-            color:#240344;
-            font-weight:bold;
-            margin-bottom:20px;
-        }
-
-        .menu-card{
+            .logout-btn{
+            width:100%;
             border:none;
-            border-radius:15px;
-            box-shadow:0 4px 15px rgba(0,0,0,.08);
+            background:#240344;
+            color:white;
+            padding:15px 25px;
+            text-align:left;
+            cursor:pointer;
             transition:.3s;
-        }
+            font-size:16px;
+            }
 
-        .menu-card:hover{
-            transform:translateY(-5px);
-        }
+            .logout-btn:hover{
+            background:rgba(255,255,255,.15);;
+            padding-left:35px;
+            }
 
-        .menu-card a{
-            text-decoration:none;
-            color:#240344;
-            font-weight:bold;
-            font-size:18px;
-        }
+            .main-content{
+                margin-left:250px;
+                padding:30px;
+            }
+
+            .header{
+                background:white;
+                padding:35px;
+                border-radius:18px;
+                box-shadow:0 5px 20px rgba(0,0,0,.08);
+                margin-bottom:25px;
+            }
+
+            .header h2{
+                color:#240344;
+                font-weight:700;
+            }
+
+            .header h4{
+                color:#6a11cb;
+                font-weight:600;
+            }
+
+            .header h5{
+                margin-top:15px;
+                font-weight:600;
+            }
+
+            .info-box{
+                background:white;
+                border-left:5px solid #8405fc;
+                padding:20px;
+                border-radius:15px;
+                margin-bottom:25px;
+                box-shadow:0 3px 12px rgba(0,0,0,.08);
+            }
+
+            .info-box h5{
+                color:#240344;
+                font-weight:700;
+                margin-bottom:10px;
+            }
+
+            .stat-card{
+                border-radius:18px;
+                color:white;
+                padding:25px;
+                box-shadow:0 5px 20px rgba(0,0,0,.12);
+                transition:.3s;
+            }
+
+            .stat-card:hover{
+                transform:translateY(-5px);
+            }
+
+            .card-dosen,
+            .card-mahasiswa,
+            .card-mk,
+            .card-jadwal,
+            .card-krs{
+                background:linear-gradient(135deg,#8405fc,#240344);
+            }
+
+            .stat-card h5{
+                font-size:18px;
+                margin-bottom:10px;
+            }
+
+            .stat-card h1{
+                font-size:50px;
+                font-weight:700;
+                margin:0;
+            }
+
     </style>
 </head>
 
@@ -152,21 +164,36 @@
 
 <div class="sidebar">
 
-    <div class="logo">
-        <h3>SIAKAD</h3>
-        <small>Universitas Suryakancana</small>
-    </div>
+```
+<div class="logo">
+    <h3>SIAKAD</h3>
+    <small>Universitas Suryakancana</small>
+</div>
 
-    <div class="sidebar-menu">
-        <a href="/admin">Dashboard</a>
-        <a href="/dosen">Dosen</a>
-        <a href="/mahasiswa">Mahasiswa</a>
-        <a href="/matakuliah">Mata Kuliah</a>
-        <a href="/jadwal">Jadwal Kuliah</a>
-        <a href="/krs">KRS</a>
-    </div>
+<div class="sidebar-menu">
+
+    <a href="/admin"> Dashboard</a>
+    <a href="/dosen">   Dosen</a>
+    <a href="/mahasiswa"> Mahasiswa</a>
+    <a href="/matakuliah"> Mata Kuliah</a>
+    <a href="/jadwal"> Jadwal Kuliah</a>
+    <a href="/krs"> KRS</a>
+
+    <form method="POST"
+          action="{{ route('logout') }}"
+          class="logout-form">
+        @csrf
+
+        <button type="submit" class="logout-btn">
+            🚪 Logout
+        </button>
+    </form>
 
 </div>
+```
+
+</div>
+
 
 <div class="main-content">
 
@@ -194,7 +221,7 @@
 
     <div class="info-box">
 
-        <h5>📢 Informasi Sistem</h5>
+        <h5>Informasi Sistem</h5>
 
         <p class="mb-0">
             Dashboard ini digunakan untuk memantau seluruh data akademik
@@ -244,53 +271,18 @@
 
     <br><br>
 
-    <h3 class="menu-title">Menu Cepat</h3>
+   <div class="info-box mt-4">
 
-    <div class="row g-4">
+    <h5>Ringkasan Sistem</h5>
 
-        <div class="col-md-4">
-            <div class="card menu-card">
-                <div class="card-body text-center">
-                    <a href="/dosen">Kelola Dosen</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card menu-card">
-                <div class="card-body text-center">
-                    <a href="/mahasiswa">Kelola Mahasiswa</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card menu-card">
-                <div class="card-body text-center">
-                    <a href="/matakuliah">Kelola Mata Kuliah</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card menu-card">
-                <div class="card-body text-center">
-                    <a href="/jadwal">Kelola Jadwal</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="card menu-card">
-                <div class="card-body text-center">
-                    <a href="/krs">Kelola KRS</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <p class="mb-0">
+        Gunakan menu navigasi di sebelah kiri untuk mengelola data dosen,
+        mahasiswa, mata kuliah, jadwal perkuliahan dan KRS mahasiswa.
+    </p>
 
 </div>
+
+</div> <!-- penutup main-content -->
 
 </body>
 </html>

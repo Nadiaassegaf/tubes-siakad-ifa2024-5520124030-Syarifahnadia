@@ -31,19 +31,41 @@
 
         .sidebar-menu{
             margin-top:20px;
+            height:calc(100vh - 170px);
+            display:flex;
+            flex-direction:column;
         }
 
         .sidebar-menu a{
             display:block;
             padding:15px 25px;
-            color:white;
             text-decoration:none;
+            color:white;
             transition:.3s;
         }
 
         .sidebar-menu a:hover{
             background:#8405fc;
             color:white;
+        }
+
+        .logout-form{
+            margin-top:auto;
+        }
+
+        .logout-btn{
+            width:100%;
+            border:none;
+            background:none;
+            color:white;
+            padding:15px 25px;
+            text-align:left;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .logout-btn:hover{
+            background:#8405fc;
         }
 
         .main-content{
@@ -112,14 +134,26 @@
         <small>Universitas Suryakancana</small>
     </div>
 
-    <div class="sidebar-menu">
-        <a href="/admin">Dashboard</a>
-        <a href="/dosen">Dosen</a>
-        <a href="/mahasiswa">Mahasiswa</a>
-        <a href="/matakuliah">Mata Kuliah</a>
-        <a href="/jadwal">Jadwal Kuliah</a>
-        <a href="/krs">KRS</a>
-    </div>
+   <div class="sidebar-menu">
+
+    <a href="/admin">Dashboard</a>
+    <a href="/dosen">Dosen</a>
+    <a href="/mahasiswa">Mahasiswa</a>
+    <a href="/matakuliah">Mata Kuliah</a>
+    <a href="/jadwal">Jadwal Kuliah</a>
+    <a href="/krs">KRS</a>
+
+    <form method="POST"
+          action="{{ route('logout') }}"
+          class="logout-form">
+        @csrf
+
+        <button type="submit" class="logout-btn">
+            Logout
+        </button>
+    </form>
+
+</div>
 
 </div>
 
