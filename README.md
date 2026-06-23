@@ -1,8 +1,14 @@
 # Sistem Informasi Akademik (SIAKAD)
 
-## Tugas Besar Web II IF53413
+## Tugas Besar Web II 
+
+# link website 
+ 
+ http://nadia.ifalgorithm24.web.id/
 
 ### Deskripsi Aplikasi
+
+
 
 Sistem Informasi Akademik (SIAKAD) merupakan aplikasi berbasis Laravel yang digunakan untuk mengelola data akademik kampus. Aplikasi ini memiliki dua role pengguna yaitu Admin dan Mahasiswa.
 
@@ -233,3 +239,5 @@ Database yang digunakan pada aplikasi terdiri dari beberapa tabel utama:
 # Repository
 
 Project ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Web II dengan tema Sistem Informasi Akademik (SIAKAD) berbasis Laravel.
+
+#  syarifah nadia alysyia 5520124030 IFA2024
